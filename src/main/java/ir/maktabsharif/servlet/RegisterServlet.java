@@ -2,10 +2,7 @@ package ir.maktabsharif.servlet;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
-import jakarta.servlet.http.HttpSession;
+import jakarta.servlet.http.*;
 
 import java.io.IOException;
 import java.math.BigDecimal;
@@ -43,6 +40,9 @@ public class RegisterServlet extends HttpServlet {
         req.setAttribute("discount", discount);
 
         req.setAttribute("finalPrice", finalPrice);
+
+        Cookie cookie = new Cookie("cookieName",studentName+"123456");
+        resp.addCookie(cookie);
 
         req.getRequestDispatcher("registration-result.jsp").forward(req, resp);
 

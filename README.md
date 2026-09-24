@@ -93,3 +93,27 @@ Student: Ali
 Course: Java Backend
 Final Price: 90.0
 If the required Session does not exist, display an appropriate message
+
+### PHASE 5 — Filter and Cookie
+Requirement 7 — StudentAuthFilter
+Create a Filter that protects:
+/mycourse
+The Filter must:
+1. Get the existing Session using:
+   request.getSession(false);
+2. Check whether the Session exists.
+3. Check whether the "studentName" attribute exists.
+4. If the student is logged in, continue the chain.
+5. Otherwise, respond with SC_FORBIDDEN and:
+   Access denied. Please register for a course first.
+   Requirement 8 — Student Cookie
+   After successful registration, create a Cookie:
+   studentName
+   The Cookie must contain the student's name.
+   Add the Cookie to the response.
+   Create: /student-cookie
+   6
+   The Servlet must read the studentName Cookie and display:
+   Student name from Cookie: Ali
+   If the Cookie does not exist:
+   Student name Cookie not found
