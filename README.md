@@ -73,3 +73,23 @@ Registration requires payment confirmation.
 Otherwise:
 Registration completed successfully.
 Use JSP logic for this requirement.
+
+### PHASE 4 — Session
+Requirement 6 — Student Session
+After a successful registration, create a Session:
+HttpSession session = request.getSession();
+Store:
+session.setAttribute("studentName", studentName);
+session.setAttribute("courseName", courseName);
+session.setAttribute("finalPrice", finalPrice);
+Create a new Servlet:
+/mycourse
+The Servlet must read the information from the Session and forward the request to:
+my-course.jsp
+The JSP must display:
+My Course
+5
+Student: Ali
+Course: Java Backend
+Final Price: 90.0
+If the required Session does not exist, display an appropriate message

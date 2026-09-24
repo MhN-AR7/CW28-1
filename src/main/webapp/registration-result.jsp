@@ -1,4 +1,5 @@
-<%@ page import="java.math.BigDecimal" %><%--
+<%@ page import="java.math.BigDecimal" %>
+<%--
   Created by IntelliJ IDEA.
   User: asus
   Date: 9/24/2026
@@ -69,6 +70,8 @@
 
     <% } %>
 </p>
+
+<a href="my-course.jsp">View My Course</a>
 
 </body>
 </html>
